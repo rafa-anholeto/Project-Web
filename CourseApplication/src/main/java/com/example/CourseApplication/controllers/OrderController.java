@@ -1,9 +1,7 @@
-package com.example.CourseApplication.resources;
+package com.example.CourseApplication.controllers;
 
 import com.example.CourseApplication.entities.Order;
-import com.example.CourseApplication.entities.User;
 import com.example.CourseApplication.services.OrderService;
-import com.example.CourseApplication.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/orders")
-public class OrderResource {
+public class OrderController {
 
     @Autowired
     private OrderService service;
