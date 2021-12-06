@@ -42,4 +42,11 @@ public class UserController {
         service.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User user){
+        user = service.update(id, user);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+
+    }
 }
